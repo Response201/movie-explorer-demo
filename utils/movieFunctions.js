@@ -1,4 +1,4 @@
-import { fetchData } from "../functions/fetchData";
+import { fetchData } from "../services/fetchData";
 
 
 
