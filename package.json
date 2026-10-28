@@ -1,0 +1,25 @@
+{
+  "name": "movie-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4"
+  },
+  "allowScripts": {
+    "sqlite3@6.0.1": true
+  }
+}
