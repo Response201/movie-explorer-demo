@@ -9,7 +9,7 @@ export async function getMovies(setMovies, setLoading, setError) {
               const data = await fetchData();
               setMovies(data);
               localStorage.setItem("movies", JSON.stringify(data));
-              
+
        } catch (error) {
               setMovies([]);
               console.log("Kunde inte hämta filmer:", error);
@@ -17,7 +17,7 @@ export async function getMovies(setMovies, setLoading, setError) {
        } finally {
 
               setLoading(false);
-              
+
 
        }
 }
@@ -28,7 +28,7 @@ export async function getMovieById(id, movies, setMovie, setLoading, setError) {
        try {
 
               setLoading(true)
-              
+
               const savedMovie = await movies.find(
                      (movie) => movie.id === Number(id)
               );
@@ -76,5 +76,11 @@ export async function toggleFavorite(movie, setMovie, setError) {
        }
 
 
+}
+
+
+
+export function getFavoriteMovies(movies) {
+       return movies.filter(movie => movie.isFavorite === true);
 }
 

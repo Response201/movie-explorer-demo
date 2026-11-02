@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "vitest"
   },
   "dependencies": {
     "next": "16.4.2",
@@ -17,7 +18,8 @@
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "@types/react-dom": "^19",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "vitest": "^5.0.5"
   },
   "allowScripts": {
     "sqlite3@6.0.1": true
