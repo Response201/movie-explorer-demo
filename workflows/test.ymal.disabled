@@ -1,0 +1,39 @@
+
+name: Next.js CI Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+# vilken virituell maskin vi kör på
+  test-and-build:
+    runs-on: ubuntu-latest
+
+# steps är de steg som github actions kommer gå igenom
+    steps:
+   
+      # Hämtar projektets kod från GitHub
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Installerar och konfigurerar Node.js
+      - name: Konfigurera Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' 
+
+       # Installerar projektets beroenden - npm ci använder package-lock.json
+      - name: Installera beroenden
+        run: npm ci
+
+      - name: Bygg Next.js-projektet
+        run: npm run build
+
+       # Kör projektets automatiserade tester > tests/movieFunctions.test.js
+      - name: Kör test
+        run: npm run test
