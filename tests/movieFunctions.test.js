@@ -28,7 +28,7 @@ import { getFavoriteMovies } from "../utils/movieFunctions";
 
 describe("getFavoriteMovies", () => {
 	const movies = [
-		{ id: 1, title: "The Matrix", isFavorite: false },
+		{ id: 1, title: "The Matrix", isFavorite: true },
 		{ id: 2, title: "Jurassic Park", isFavorite: false },
 		{ id: 3, title: "Pulp Fiction", isFavorite: true }
 	];
