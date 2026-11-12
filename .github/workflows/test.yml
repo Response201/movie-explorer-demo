@@ -34,5 +34,5 @@ jobs:
 
        # Kör projektets automatiserade tester > tests/movieFunctions.test.js
       - name: Kör test
-        run: npm run test
+        run: npm test
 
